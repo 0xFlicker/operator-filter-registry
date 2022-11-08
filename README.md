@@ -45,14 +45,26 @@ Ethereum Mainnet
 </tr>
 
 <tr>
-<td>LooksRareExchange</td>
-<td>0x59728544b08ab483533076417fbbb2fd0b17ce3a</td>
+<td>LooksRare TransferManagerERC721</td>
+<td>0xf42aa99F011A1fA7CDA90E5E98b277E306BcA83e</td>
+<td>Ethereum Mainnet</td>
+</tr>
+
+<tr>
+<td>LooksRare TransferManagerERC1155</td>
+<td>0xFED24eC7E22f573c2e08AEF55aA6797Ca2b3A051</td>
 <td>Ethereum Mainnet</td>
 </tr>
 
 <tr>
 <td>X2Y2 ERC721Delegate</td>
 <td>0xf849de01b080adc3a814fabe1e2087475cf2e354</td>
+<td>Ethereum Mainnet</td>
+</tr>
+
+<tr>
+<td>X2Y2 ERC1155Delegate</td>
+<td>0x024ac22acdb367a3ae52a3d94ac6649fdc1f0779</td>
 <td>Ethereum Mainnet</td>
 </tr>
 
@@ -88,7 +100,7 @@ Ethereum Mainnet
 
 ## Usage
 
-Token contracts that wish to manage lists of filtered operators and restrict transfers from them may integrate with the registry easily using the [`OperatorFilterer`](src/OperatorFilterer.sol) and [`DefaultOperatorFilterer`](src/DefaultOperatorFilterer.sol) contracts. These contracts provide a modifier (`isAllowedOperator`) which can be used on the token's transfer methods to restrict transfers from filtered operators.
+Token contracts that wish to manage lists of filtered operators and restrict transfers from them may integrate with the registry easily with ERC721 tokens using the [`OperatorFilterer721`](src/example/OperatorFilterer721.sol) and [`DefaultOperatorFilterer721`](src/example/DefaultOperatorFilterer721.sol) contracts. For ERC1155 tokens, [`OperatorFilterer1155`](src/example/OperatorFilterer1155.sol) and [`DefaultOperatorFilterer1155`](src/example/DefaultOperatorFilterer1155.sol) are also provided. These contracts provide a modifier (`isAllowedOperator`) which can be used on the token's transfer methods to restrict transfers from filtered operators.
 
 See the [ExampleERC721](src/example/ExampleERC721.sol) contract for a basic implementation that inherits the `DefaultOperatorFilterer`.
 
